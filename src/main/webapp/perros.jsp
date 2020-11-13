@@ -1,3 +1,4 @@
+  
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
@@ -11,12 +12,14 @@
 	<h1>Perrera</h1>
 	
 	
+	
 	 <ul>
 		 <c:forEach items="${perros}" var="perro">
 		 	<li>${perro.id} ${perro.nombre} ${perro.raza}</li>	
 		 </c:forEach>
 	 </ul>
 	
+		<a href="index.jsp">Volver</a>
 
 </body>
 </html>
