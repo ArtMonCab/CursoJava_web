@@ -1,4 +1,7 @@
-<jsp:include page="includes/cabecera.jsp" />  
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<jsp:include page="includes/cabecera.jsp" />
+
 <h1>${perro.nombre}</h1>
 
 
@@ -12,4 +15,5 @@ ${perro.historia}
 
 <hr>
 <a href="perro-eliminar?id=${perro.id}">ELIMINAR PERRO, Cuidado no tiene vuelta atras!!!</a>
-<jsp:include page="includes/pie.jsp" />
+
+<jsp:include page="includes/pie.jsp" />	

@@ -39,7 +39,7 @@ public class PerroEliminarController extends HttpServlet {
 			int id = Integer.parseInt(parametroId);
 
 			if (dao.eliminar(id)) {
-				request.setAttribute("mensaje", "Perro Elimnado");
+				request.setAttribute("mensaje", "Perro Eliminado");
 			} else {
 				request.setAttribute("mensaje", "Los entimos pero no se ha podido Eliminar el Perro");
 			}
