@@ -1,0 +1,82 @@
+
+
+
+header{
+    background-image:  url("images/hojarasca.jpg");
+    background-color: transparent;
+}
+
+img{
+    width: 100%;
+    height:auto !important;
+}
+.cabecera {
+    background-color: #7c7c1d;
+    padding: 10px;
+    position: sticky;
+    top: 0;
+}
+
+.pie {
+    background-color:  #aeae2d;
+    padding: 1em;
+    width: 100%;
+}
+
+.cabecera a { 
+    text-decoration: none; /* quitar rayita de abajo al los enlaces */
+    cursor: pointer;  /* cambiar icono de flecha a mano */
+    color: #FFF
+}
+
+.pie a { 
+    text-decoration: none; /* quitar rayita de abajo al los enlaces */
+    cursor: pointer;  /* cambiar icono de flecha a mano */
+    color: #000
+}
+
+nav ul {
+
+    /* posicionar los LIs en horizontal y dividir el spacio */
+    display: flex;
+    justify-content: space-between;
+    max-width: 1024px;
+    box-sizing: border-box;  /* si tenemos padding o border lo descuenta del ancho, no los suma */
+    margin: auto; /* centrar el contenido en horizontal */
+}  
+
+.cabecera ul li{
+    list-style: none; /* quitar puntito */    
+    width: 100%;
+    text-align: left;
+    padding: 5px 0;
+    font-size: larger;
+    color: #FFF
+} 
+
+.pie ul li{
+    list-style: none; /* quitar puntito */    
+    width: 100%;
+    text-align: left;
+    padding: 5px 0;
+    color: #000
+}
+
+nav ul li:hover{
+    background-color: #aeae2d;
+}
+
+a:hover{
+    text-decoration: none;
+    color:#FFF;
+}
+
+footer{
+    background-color: #aeae2d;
+    font-size: small;
+}
+
+p{
+    justify-content: baseline;
+    padding: 1rem;
+}

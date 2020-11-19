@@ -58,15 +58,18 @@ public class PerroController extends HttpServlet {
 			throws ServletException, IOException {
 		
 		String mensaje = "";
-		//recibir datos del formulario, fijaros en el input el atributo 'name'
-		String parametroNombre = request.getParameter("nombre");
+		
+		//recibri datos del formulario, fijaros en el input el atributo 'name'
+		int id = Integer.parseInt(request.getParameter("id"));
+		String nombre = request.getParameter("nombre");
 		String raza = request.getParameter("raza");
-		float peso = Float.parseFloat(request.getParameter("peso"));
-		boolean vacunado = (request.getParameter("vacunado") != null) ? false : true;
+	    float peso = Float.parseFloat(request.getParameter("peso"));
+		boolean vacunado = ( request.getParameter("vacunado") == null ) ?  false : true;		
 		String historia = request.getParameter("historia");
 		
 		Perro p = new Perro();
-		p.setNombre(parametroNombre);
+		p.setId(id);
+		p.setNombre(nombre);
 		p.setRaza(raza);
 		p.setPeso(peso);
 		p.setVacunado(vacunado);
@@ -74,21 +77,27 @@ public class PerroController extends HttpServlet {
 		
 		//guardarlo en la bbdd
 		try {
-			dao.crear(p);
-			mensaje = "Perro insertado con exito";
+			
+			if ( id == 0 ) {			
+				dao.crear(p);
+				mensaje = "Perro insertado con exito";
+			}else {
+				dao.modificar(p);
+				mensaje = "Perro Modificado con exito";
+			}
 			
 		} catch (Exception e) {			
 			e.printStackTrace();
 			mensaje = "Lo sentimos pero " + p.getNombre() +" de perro ya existe";
+			
 		}finally {
 		
 			// enviarlos a la JSP
 			request.setAttribute("perro", p);
 			request.setAttribute("mensaje", mensaje);
-		
 			// ir a la JSP
-			request.getRequestDispatcher("perro.jsp").forward(request, response);
-		}
+			request.getRequestDispatcher("formulario.jsp").forward(request, response);
+		}	
 	}
 
 }
