@@ -26,7 +26,8 @@ img{
 .cabecera a { 
     text-decoration: none; /* quitar rayita de abajo al los enlaces */
     cursor: pointer;  /* cambiar icono de flecha a mano */
-    color: #FFF
+    color: #FFF;
+    
 }
 
 .pie a { 
@@ -43,7 +44,9 @@ nav ul {
     max-width: 1024px;
     box-sizing: border-box;  /* si tenemos padding o border lo descuenta del ancho, no los suma */
     margin: auto; /* centrar el contenido en horizontal */
-}  
+    list-style: none; /* quitar puntito */    
+    background-color: #7c7c1d;
+}
 
 .cabecera ul li{
     list-style: none; /* quitar puntito */    
@@ -51,7 +54,8 @@ nav ul {
     text-align: left;
     padding: 5px 0;
     font-size: larger;
-    color: #FFF
+    color:white;
+
 } 
 
 .pie ul li{
