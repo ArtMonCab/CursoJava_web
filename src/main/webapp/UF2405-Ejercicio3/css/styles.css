@@ -1,0 +1,23 @@
+.logo{
+    width: 10%;
+    height: auto;
+}
+
+.social{
+    width: 50px;
+    height: auto;
+}
+
+.arriba{
+    visibility: hidden;
+}
+
+@media (max-width: 576px) {
+
+    .arriba{
+        visibility: visible;
+    
+    }
+     
+}
+ 

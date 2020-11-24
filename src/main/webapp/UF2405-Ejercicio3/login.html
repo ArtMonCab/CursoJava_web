@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>Acceso para administradores</title>
+  </head>
+
+  <body class="container-fluid">
+    <nav
+      class="row navbar navbar-expand-lg navbar-dark bg-primary sticky-top"
+      aria-label="Menú principal"
+    >
+      <a class="navbar-brand" href="#"
+        ><img
+          src="imagenes/super.png"
+          class="img-fluid logo"
+          alt="Responsive image"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="listado.html">Nuestro catálogo</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="producto.html">Nuevo producto</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="login.html">Acceso</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <h1>Acceso administrador</h1>
+
+    <form action="index.html" class="needs-validation" novalidate>
+      <div class="form-group row">
+        <label for="email" class="col-sm-2 col-form-label">Email</label>
+        <div class="col-sm-10">
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            required
+            placeholder="El formato del email debe ser del tipo nombre@dominio.xxx"
+          />
+          <div class="valid-feedback">Email valido</div>
+          <div class="invalid-feedback">
+            Debe introducir un email valido del tipo nombre@dominio.xxx
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="apellidos" class="col-sm-2 col-form-label">Password</label>
+        <div class="col-sm-10">
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            required
+            pattern="[A-Za-z][A-Za-z0-9]*[0-9][A-Za-z0-9]*"
+            placeholder="La contraseña debe empezar con una letra,contener al menos un dígito y tener una longitud minima de 8 caracteres"
+            minlength="8"
+          />
+          <div class="valid-feedback">Password valido</div>
+          <div class="invalid-feedback">
+            Es obligatorio introducir un password correcto, que tenga 8
+            caracteres, comience por una letra, y contenga al menos un numero
+          </div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="offset-sm-2 col-sm-10">
+          <button type="submit" class="btn btn-primary">Aceptar</button>
+        </div>
+      </div>
+    </form>
+    <footer>
+      <nav
+        class="row navbar navbar-expand-lg navbar-dark bg-primary"
+        aria-label="Menu pie"
+      >
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Política privacidad</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">localización</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><img
+                  class="social"
+                  src="imagenes/facebook.png"
+                  class="img-fluid"
+                  alt="Responsive image"
+              /></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><img
+                  class="social"
+                  src="imagenes/twitter.png"
+                  class="img-fluid"
+                  alt="Responsive image"
+              /></a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">&copy; 2020 Arturo Montañez</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </footer>
+
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        "use strict";
+        window.addEventListener(
+          "load",
+          function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName("needs-validation");
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(
+              forms,
+              function (form) {
+                form.addEventListener(
+                  "submit",
+                  function (event) {
+                    if (form.checkValidity() === false) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                    }
+                    form.classList.add("was-validated");
+                  },
+                  false
+                );
+              }
+            );
+          },
+          false
+        );
+      })();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+
+    <title>Edición del producto</title>
+  </head>
+
+  <body class="container-fluid">
+    <nav
+      class="row navbar navbar-expand-lg navbar-dark bg-primary sticky-top"
+      aria-label="Menú principal"
+    >
+      <a class="navbar-brand" href="#"
+        ><img
+          src="imagenes/super.png"
+          class="img-fluid logo"
+          alt="Responsive image"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="listado.html">Nuestro catálogo</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="producto.html">Nuevo producto</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Acceso</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <h1>Datos del producto</h1>
+
+    <form action="listado.html" class="needs-validation">
+      <div class="form-group row">
+        <label for="numero-referencia" class="col-sm-2 col-form-label"
+          >Numero de referencia</label
+        >
+        <div class="input-group col-sm-10">
+          <input
+            type="number"
+            class="form-control"
+            id="numero-referencia"
+            required
+            minlength="3"
+            pattern="[0-9]{12}"
+            placeholder="El número de referencia se compone de 12 digitos"
+          />
+
+          <div class="valid-feedback">Referencia correcta</div>
+          <div class="invalid-feedback">Debe rellenarse</div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="nombre" class="col-sm-2 col-form-label">Nombre</label>
+        <div class="col-sm-10">
+          <input
+            type="text"
+            class="form-control"
+            id="nombre"
+            required
+            placeholder="Introduzca el nombre del producto"
+          />
+          <div class="valid-feedback">Nombre correcto</div>
+          <div class="invalid-feedback">
+            Debe introducir un nombre con como mínimo 3 letras, y solo letras y
+            mayúscula la primera
+          </div>
+        </div>
+      </div>
+      <div class="form-group row">
+        <label for="precio-venta" class="col-sm-2 col-form-label"
+          >Precio de venta</label
+        >
+        <div class="input-group col-sm-10">
+          <input
+            type="number"
+            class="form-control"
+            id="precio-venta"
+            required
+            pattern="\d"
+          />
+
+          <div class="input-group-append">
+            <span class="input-group-text rounded-right" id="basic-addon2"
+              >€</span
+            >
+          </div>
+
+          <div class="valid-feedback">Precio de venta correcto</div>
+          <div class="invalid-feedback">Debe rellenarse y ser mayor que 0</div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <label for="precio-rebajado" class="col-sm-2 col-form-label"
+          >Precio rebajado</label
+        >
+        <div class="input-group col-sm-10">
+          <input
+            type="number"
+            class="form-control"
+            id="precio-rebajado"
+            pattern="\d"
+          />
+
+          <div class="input-group-append">
+            <span class="input-group-text rounded-right" id="basic-addon2"
+              >€</span
+            >
+          </div>
+
+          <div class="valid-feedback">Precio rebajado correcto</div>
+          <div class="invalid-feedback">Debe ser mayor que 0</div>
+        </div>
+      </div>
+
+      <div class="form-group row">
+        <div class="offset-sm-2 col-sm-10">
+          <button type="submit" class="btn btn-primary">Aceptar</button>
+        </div>
+      </div>
+    </form>
+
+    <footer>
+      <nav
+        class="row navbar navbar-expand-lg navbar-dark bg-primary"
+        aria-label="Menu pie"
+      >
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">Política privacidad</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Contacto</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">localización</a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><img
+                  class="social"
+                  src="imagenes/facebook.png"
+                  class="img-fluid"
+                  alt="Responsive image"
+              /></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#"
+                ><img
+                  class="social"
+                  src="imagenes/twitter.png"
+                  class="img-fluid"
+                  alt="Responsive image"
+              /></a>
+            </li>
+          </ul>
+
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="#">&copy; 2020 Arturo Montañez</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </footer>
+    <script src="js/jquery-3.5.1.slim.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      // Example starter JavaScript for disabling form submissions if there are invalid fields
+      (function () {
+        "use strict";
+        window.addEventListener(
+          "load",
+          function () {
+            // Fetch all the forms we want to apply custom Bootstrap validation styles to
+            var forms = document.getElementsByClassName("needs-validation");
+            // Loop over them and prevent submission
+            var validation = Array.prototype.filter.call(
+              forms,
+              function (form) {
+                form.addEventListener(
+                  "submit",
+                  function (event) {
+                    if (form.checkValidity() === false) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                    }
+                    form.classList.add("was-validated");
+                  },
+                  false
+                );
+              }
+            );
+          },
+          false
+        );
+      })();
+    </script>
+  </body>
+</html>
